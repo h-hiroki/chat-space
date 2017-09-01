@@ -1,5 +1,8 @@
 
-## usersテーブル
+# DB設計
+
+
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -14,7 +17,7 @@
 
 
 
-## groupsテーブル
+## groups table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -27,7 +30,7 @@
 
 
 
-## membersテーブル
+## members table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -40,7 +43,7 @@
 
 
 
-## messagesテーブル
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
