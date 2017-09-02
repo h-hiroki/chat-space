@@ -7,8 +7,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false, unique: true|
-|password|string|null: false|
-|name|string|null: false|
+|name|string|null: false, unique: true, add_index :users, :name|
 
 ### Association
 - has_many :messages
@@ -21,7 +20,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
@@ -49,7 +48,7 @@
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|
+|body|string|
 |image|string|
 
 ### Association
