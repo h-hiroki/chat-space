@@ -11,8 +11,8 @@
 
 ### Association
 - has_many :messages
-- has_many :members
-- has_many :groups, through: :members
+- has_many :user_groups
+- has_many :groups, through: :user_groups
 
 
 
@@ -24,12 +24,12 @@
 
 ### Association
 - has_many :messages
-- has_many :members
-- has_many :users, through: :members
+- has_many :user_groups
+- has_many :users, through: :user_groups
 
 
 
-## members table
+## user_groups table
 
 |Column|Type|Options|
 |------|----|-------|
