@@ -5,45 +5,47 @@
     %i.sidebar__user__btn-left.fa.fa-pencil-square-o
 
   .sidebar__groups
-    .sidebar__groups__group
-      %p.group-name chat-group-1
-      %p.group-messeage messeage1
-    .sidebar__groups__group
-      %p.group-name chat-group-2
-      %p.group-messeage messeage2
-    .sidebar__groups__group
-      %p.group-name chat-group-3
-      %p.group-messeage messeage3
+    .sidebar__groups-list
+      .sidebar__group
+        %p.group-name chat-group-1
+        %p.group-messeage messeage1
+      .sidebar__group
+        %p.group-name chat-group-2
+        %p.group-messeage messeage2
+      .sidebar__group
+        %p.group-name chat-group-3
+        %p.group-messeage messeage3
 
 .contents
   .content__header
     .content__header__infomation
-      %p.content__header__infomation__name chat-group-3
-      %p.content__header__infomation__member-name MEMBER: gyouza
+      %p.content__header__infomation-name chat-group-3
+      %p.content__header__infomation-member-name MEMBER: gyouza
 
-    .content__header__edit-btn edit
+    .content__header__edit edit
 
-  .content__messeages
-    .messeage__top
-      .messeage__top__name gyouza
-      .messeage__top__time 2017/09/05 20:52:52
-    .messeage__body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-    .messeage__top
-      .messeage__top__name gyouza
-      .messeage__top__time 2017/09/05 20:52:52
-    .messeage__body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-    .messeage__top
-      .messeage__top__name gyouza
-      .messeage__top__time 2017/09/05 20:52:52
-    .messeage__body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-    .messeage__top
-      .messeage__top__name gyouza
-      .messeage__top__time 2017/09/05 20:52:52
-    .messeage__body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+  .content__body
+    .content__body__messeage-list
+      .content__body__messeage
+        .content__body__messeage-name gyouza
+        .content__body__messeage-time 2017/09/05 20:52:52
+      .messeage__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .content__body__messeage
+        .content__body__messeage-name gyouza
+        .content__body__messeage-time 2017/09/05 20:52:52
+      .messeage__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .content__body__messeage
+        .content__body__messeage-name gyouza
+        .content__body__messeage-time 2017/09/05 20:52:52
+      .messeage__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .content__body__messeage
+        .content__body__messeage-name gyouza
+        .content__body__messeage-time 2017/09/05 20:52:52
+      .messeage__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
 
-  .content__form
-    .content__form__input
+  .content__footer
+    .content__footer__form
       %input.field{ type: "text", placeholder: "type a message" }
-      .content__form_input__btn
+      .content__footer__send-btn
         %i.input-btn.fa.fa-picture-o
       %input.button{ type: "submit", value: "Send"}
