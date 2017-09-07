@@ -21,12 +21,14 @@
       padding: 40px 0 42px 0;
       color: white;
       float: right;
+      text-decoration: none;
     }
 
     &__btn-right {
       padding: 40px 0 42px 0;
       color: white;
       float: right;
+      text-decoration: none;
     }
 
   }
@@ -83,6 +85,12 @@
       color: $btnColorBlue;
       border: 1px solid;
       font-size: 15px;
+
+      a {
+        color: $btnColorBlue;
+        text-decoration: none;
+      }
+
     }
   }
 

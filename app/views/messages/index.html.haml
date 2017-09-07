@@ -1,5 +1,5 @@
 
-= render partial: "sidebar"
+=   render partial: "sidebar"
 
 .contents
   .contents__header
@@ -8,7 +8,7 @@
       %p.contents__header__infomation-member-name MEMBER: gyouza
 
     .contents__header__edit
-      %a.contents__header__edit-btn edit
+      =link_to "edit", "/", class: "contents__header__edit-btn"
 
   .contents__body
     .contents__body__messeage-list
