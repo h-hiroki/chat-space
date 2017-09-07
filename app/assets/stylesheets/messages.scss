@@ -2,7 +2,7 @@
   height: 100vh;
   width: 300px;
   float: left;
-  color: #FFFFFF;
+  color: $fontColorWhite;
 
   &__user {
     background-color: #253141;
@@ -80,7 +80,7 @@
       float: right;
       margin: 28px 20px 0;
       padding: 12.5px 20px;
-      color: #38AEF0;
+      color: $btnColorBlue;
       border: 1px solid;
       font-size: 15px;
     }
@@ -102,7 +102,7 @@
         float: left;
         font-size: 16px;
         font-weight: bold;
-        color: #434A54;
+        color: $fontColorDarkGray;
         padding-bottom: 10px;
       }
 
@@ -115,7 +115,7 @@
 
       &-body{
         font-size: 14px;
-        color: #434A54;
+        color: $fontColorDarkGray;
         padding: 0 40px 40px 40px;
         clear: both;
       }
@@ -146,7 +146,7 @@
       }
 
       .button {
-        background-color: #38AEF0;
+        background-color: $btnColorBlue;
         border: none;
         color: #FFFFFF;
         height: 50px;
