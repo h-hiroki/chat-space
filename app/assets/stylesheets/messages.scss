@@ -1,0 +1,113 @@
+.contents {
+  height: 100vh;
+  width: calc( 100vw - 300px );
+  float: right;
+
+  &__header {
+    height: 15%;
+    padding: 0 40px;
+
+    &__infomation {
+      float: left;
+
+      &-name {
+        font-size: 20px;
+        color: $fontColorBlack;
+        padding: 35px 0 15px 0;
+      }
+
+      &-member-name {
+        font-size: 12px;
+        color: $fontColorLightGray;
+      }
+    }
+
+    &__edit {
+      float: right;
+      margin: 28px 20px 0;
+      padding: 12.5px 20px;
+      color: $btnColorBlue;
+      border: 1px solid;
+      font-size: 15px;
+
+      a {
+        color: $btnColorBlue;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+  &__body {
+    height: calc( 100vh - 15% - 90px);
+    background-color: $backgroundColorGray;
+    border-top: 1px solid $borderColorGray;
+
+    &__messeage-list {
+      padding-top: 46px;
+    }
+
+    &__messeage {
+      padding: 0 40px 0 40px;
+
+      &-name {
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        color: $fontColorDarkGray;
+        padding-bottom: 10px;
+      }
+
+      &-time {
+        float: left;
+        margin-left: 10px;
+        font-size: 12px;
+        color: $fontColorLightGray;
+      }
+
+      &-body{
+        font-size: 14px;
+        color: $fontColorDarkGray;
+        padding: 0 40px 40px 40px;
+        clear: both;
+      }
+    }
+  }
+
+  &__footer {
+    height: 90px;
+    padding: 0 40px;
+
+
+    &__form > input{
+      height: 50px;
+      width: 80%;
+      padding: 0 10px;
+      margin: 20px 0;
+      font-size: 16px;
+      color: $fontColorGray;
+      float: left;
+
+    }
+
+    &__btn {
+      float: right;
+
+      .input-btn {
+        padding-right: 10px;
+      }
+
+      .button {
+        background-color: $btnColorBlue;
+        border: none;
+        color: $fontColorWhite;
+        height: 50px;
+        width: 100px;
+        margin: 20px 0 0 15px;
+
+      }
+    }
+
+  }
+
+}

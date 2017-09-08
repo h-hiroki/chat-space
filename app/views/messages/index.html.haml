@@ -1,0 +1,37 @@
+
+=   render partial: "sidebar"
+
+.contents
+  .contents__header
+    .contents__header__infomation
+      %p.contents__header__infomation-name chat-group-3
+      %p.contents__header__infomation-member-name MEMBER: gyouza
+
+    .contents__header__edit
+      =link_to "edit", root_path, class: "contents__header__edit-btn"
+
+  .contents__body
+    .contents__body__messeage-list
+      .contents__body__messeage
+        .contents__body__messeage-name gyouza
+        .contents__body__messeage-time 2017/09/05 20:52:52
+      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .contents__body__messeage
+        .contents__body__messeage-name gyouza
+        .contents__body__messeage-time 2017/09/05 20:52:52
+      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .contents__body__messeage
+        .contents__body__messeage-name gyouza
+        .contents__body__messeage-time 2017/09/05 20:52:52
+      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+      .contents__body__messeage
+        .contents__body__messeage-name gyouza
+        .contents__body__messeage-time 2017/09/05 20:52:52
+      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+
+  .contents__footer
+    .contents__footer__form
+      %input.field{ type: "text", placeholder: "type a message" }
+    .contents__footer__btn
+      %i.input-btn.fa.fa-picture-o
+      %input.button{ type: "submit", value: "Send"}
