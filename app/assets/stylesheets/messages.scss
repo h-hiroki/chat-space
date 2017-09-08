@@ -12,13 +12,13 @@
 
       &-name {
         font-size: 20px;
-        color: #333333;
+        color: $fontColorBlack;
         padding: 35px 0 15px 0;
       }
 
       &-member-name {
         font-size: 12px;
-        color: #999999;
+        color: $fontColorLightGray;
       }
     }
 
@@ -40,8 +40,8 @@
 
   &__body {
     height: calc( 100vh - 15% - 90px);
-    background-color: #AAAAAA;
-    border-top: 1px solid #eeeeee;
+    background-color: $backgroundColorGray;
+    border-top: 1px solid $borderColorGray;
 
     &__messeage-list {
       padding-top: 46px;
@@ -62,7 +62,7 @@
         float: left;
         margin-left: 10px;
         font-size: 12px;
-        color: #999999;
+        color: $fontColorLightGray;
       }
 
       &-body{
@@ -85,7 +85,7 @@
       padding: 0 10px;
       margin: 20px 0;
       font-size: 16px;
-      color: #434A54;
+      color: $fontColorGray;
       float: left;
 
     }
@@ -100,7 +100,7 @@
       .button {
         background-color: $btnColorBlue;
         border: none;
-        color: #FFFFFF;
+        color: $fontColorWhite;
         height: 50px;
         width: 100px;
         margin: 20px 0 0 15px;

@@ -5,7 +5,7 @@
   color: $fontColorWhite;
 
   &__user {
-    background-color: #253141;
+    background-color: $backgroundColorNavy;
     padding: 0 20px;
     height: 15%;
 
@@ -34,7 +34,7 @@
   }
 
   &__groups {
-    background-color: #2f3e51;
+    background-color: $backgroundColorLightNavy;
     padding: 0 20px;
     height: 85%;
   }
