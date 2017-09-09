@@ -3,11 +3,11 @@
   text-align: center;
 
   &__alert {
-    background-color: $backgroundColorGray;
+    background-color: $flashMsgColorRed;
   }
 
   &__notice {
-    background-color: $backgroundColorLightNavy;
+    background-color: $flashMsgColorBlue;
   }
 
 }
