@@ -9,6 +9,7 @@ class GroupsController < ApplicationController
 
   def create
     Group.create(create_params)
+    redirect_to root_path
   end
 
   def update
