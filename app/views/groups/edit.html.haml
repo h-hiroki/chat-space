@@ -1,6 +1,6 @@
 .chat-group-form
   %h1 チャットグループ編集
-  = form_for @group, url: {controller: :groups, action: :create}, html: {class: 'edit_chat_group', id: 'edit_chat_group', method: 'POST'} do |f|
+  = form_for @group, url: {controller: :groups, action: :update}, html: {class: 'edit_chat_group', id: 'edit_chat_group', method: 'PATCH'} do |f|
     - if @group.errors.any?
       .chat-group-form__errors
         %h2
@@ -13,7 +13,7 @@
       .chat-group-form__field--left
         = f.label :name, 'グループ名', class: 'chat-group-form__label', for: "chat_group_name"
       .chat-group-form__field--right
-        = f.text_field :name, placeholder: 'グループ名を入力してください', class: 'chat-group-form__input', id: 'chat_group_name', value: 'ほげー'
+        = f.text_field :name, placeholder: 'グループ名を入力してください', class: 'chat-group-form__input', id: 'chat_group_name', value: @group.name
     .chat-group-form__field.clearfix
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
       /
