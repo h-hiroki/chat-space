@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    get_group_params
+    set_group_params
   end
 
   def create
@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    get_group_params
+    set_group_params
     @group.update(create_params)
     redirect_to root_path, notice: 'グループを編集しました'
   end
@@ -31,7 +31,7 @@ class GroupsController < ApplicationController
     params.require(:group).permit(:name, user_ids: [])
   end
 
-  def get_group_params
+  def set_group_params
     @group = Group.find(params[:id])
   end
 end
