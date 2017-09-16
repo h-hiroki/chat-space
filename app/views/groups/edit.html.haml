@@ -1,6 +1,6 @@
 .chat-group-form
   %h1 チャットグループ編集
-  = form_for @group, url: {controller: :groups, action: :update}, html: {class: 'edit_chat_group', id: 'edit_chat_group', method: 'PATCH'} do |f|
+  = form_for @group, html: {class: 'edit_chat_group', id: 'edit_chat_group'} do |f|
     - if @group.errors.any?
       .chat-group-form__errors
         %h2
