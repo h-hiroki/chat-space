@@ -1,0 +1,13 @@
+.sidebar
+  .sidebar__user
+    %p.sidebar__user__username
+      = current_user.name
+    = link_to "", edit_user_registration_path, class: "sidebar__user__btn-right fa fa-cog"
+    = link_to "", root_path, class: "sidebar__user__btn-left fa fa-pencil-square-o"
+
+  .sidebar__groups
+    .sidebar__groups-list
+      - current_user.groups.each do |group|
+        .sidebar__group
+          %p.sidebar__group-name #{group.name}
+          %p.sidebar__group-messeage まだメッセージはありません
