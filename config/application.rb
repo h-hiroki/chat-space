@@ -19,5 +19,7 @@ module ChatSpace
     # language
     config.i18n.default_locale = :ja
 
+    # バリデーションエラー時にfield_with_errorsを出力しない対応
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
   end
 end

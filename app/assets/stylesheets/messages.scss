@@ -79,7 +79,7 @@
     padding: 0 40px;
 
 
-    &__form > input{
+    &__form > input {
       height: 50px;
       width: 80%;
       padding: 0 10px;
@@ -93,18 +93,22 @@
     &__btn {
       float: right;
 
-      .input-btn {
-        padding-right: 10px;
+      &__input {
+        padding-left: 15px;
       }
 
-      .button {
+      &__input-field {
+        display:none;
+      }
+
+      &__send {
         background-color: $btnColorBlue;
         border: none;
         color: $fontColorWhite;
         height: 50px;
         width: 100px;
         margin: 20px 0 0 15px;
-
+        font-size: 16px;
       }
     }
 

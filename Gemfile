@@ -64,3 +64,6 @@ gem 'devise'
 
 # pry-rails
 gem 'pry-rails'
+
+gem 'carrierwave'
+gem 'mini_magick'
