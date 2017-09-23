@@ -31,8 +31,9 @@
 
   .contents__footer
     .contents__footer__form
-      = form_for @message, url: {action: :create} do |f|
+      = form_for @message, url: {action: :create}, html: {class: 'contents__footer__form'} do |f|
         = f.text_field :body, placeholder: "type a message"
-        = f.label :image, class: 'contents__footer__btn' do
-          %i.input-btn.fa.fa-picture-o
-        = f.button "send",class: 'contents__footer__btn'
+        = f.label :image, class: "contents__footer__btn__input" do
+          %i{"class":"fa fa-picture-o", "aria-hidden": "true"}
+          = f.file_field :image, class: "contents__footer__btn__input-field"
+        = f.button "send",class: 'contents__footer__btn__send'
