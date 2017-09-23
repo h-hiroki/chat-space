@@ -31,7 +31,8 @@
 
   .contents__footer
     .contents__footer__form
-      %input.field{ type: "text", placeholder: "type a message" }
-    .contents__footer__btn
-      %i.input-btn.fa.fa-picture-o
-      %input.button{ type: "submit", value: "Send"}
+      = form_for @message, url: {action: :create} do |f|
+        = f.text_field :body, placeholder: "type a message"
+        = f.label :image, class: 'contents__footer__btn' do
+          %i.input-btn.fa.fa-picture-o
+        = f.button "send",class: 'contents__footer__btn'
