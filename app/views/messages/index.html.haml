@@ -4,8 +4,11 @@
 .contents
   .contents__header
     .contents__header__infomation
-      %p.contents__header__infomation-name chat-group-3
-      %p.contents__header__infomation-member-name MEMBER: gyouza
+      %p.contents__header__infomation-name #{@group.name}
+      %p.contents__header__infomation-member-name
+        MEMBER:
+        - @group.users.each do |user|
+          #{user.name}
 
     .contents__header__edit
       =link_to "edit", root_path, class: "contents__header__edit-btn"
