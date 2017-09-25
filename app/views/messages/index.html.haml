@@ -11,7 +11,7 @@
           #{user.name}
 
     .contents__header__edit
-      =link_to "edit", root_path, class: "contents__header__edit-btn"
+      =link_to "edit", edit_group_path(@group.id), class: "contents__header__edit-btn"
 
   .contents__body
     .contents__body__messeage-list
