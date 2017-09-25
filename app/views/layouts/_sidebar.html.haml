@@ -10,4 +10,4 @@
       - current_user.groups.each do |group|
         .sidebar__group
           %p.sidebar__group-name #{group.name}
-          %p.sidebar__group-messeage まだメッセージはありません
+          %p.sidebar__group-messeage #{group.last_msg}
