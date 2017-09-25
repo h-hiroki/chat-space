@@ -43,6 +43,11 @@
   &__group {
     padding: 20px 0 40px 0;
 
+    &-content {
+      text-decoration: none;
+      color: $fontColorWhite;
+    }
+
     &-name {
       font-size: 15px;
       padding-bottom: 5px;
