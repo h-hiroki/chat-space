@@ -42,6 +42,7 @@
     height: calc( 100vh - 15% - 90px);
     background-color: $backgroundColorGray;
     border-top: 1px solid $borderColorGray;
+    overflow: scroll;
 
     &__messeage-list {
       padding-top: 46px;
