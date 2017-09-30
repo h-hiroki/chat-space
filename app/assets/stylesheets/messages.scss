@@ -42,6 +42,7 @@
     height: calc( 100vh - 15% - 90px);
     background-color: $backgroundColorGray;
     border-top: 1px solid $borderColorGray;
+    overflow: scroll;
 
     &__messeage-list {
       padding-top: 46px;
@@ -70,6 +71,10 @@
         color: $fontColorDarkGray;
         padding: 0 40px 40px 40px;
         clear: both;
+      }
+
+      &-image{
+        padding-left: 40px;
       }
     }
   }

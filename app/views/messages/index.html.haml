@@ -4,30 +4,16 @@
 .contents
   .contents__header
     .contents__header__infomation
-      %p.contents__header__infomation-name chat-group-3
-      %p.contents__header__infomation-member-name MEMBER: gyouza
+      %p.contents__header__infomation-name #{@group.name}
+      %p.contents__header__infomation-member-name
+        MEMBER:
+        - @group.users.each do |user|
+          #{user.name}
 
     .contents__header__edit
-      =link_to "edit", root_path, class: "contents__header__edit-btn"
+      =link_to "edit", edit_group_path(@group.id), class: "contents__header__edit-btn"
 
-  .contents__body
-    .contents__body__messeage-list
-      .contents__body__messeage
-        .contents__body__messeage-name gyouza
-        .contents__body__messeage-time 2017/09/05 20:52:52
-      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-      .contents__body__messeage
-        .contents__body__messeage-name gyouza
-        .contents__body__messeage-time 2017/09/05 20:52:52
-      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-      .contents__body__messeage
-        .contents__body__messeage-name gyouza
-        .contents__body__messeage-time 2017/09/05 20:52:52
-      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
-      .contents__body__messeage
-        .contents__body__messeage-name gyouza
-        .contents__body__messeage-time 2017/09/05 20:52:52
-      .contents__body__messeage-body testingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtestingtesting
+  = render partial: 'message_content'
 
   .contents__footer
     .contents__footer__form

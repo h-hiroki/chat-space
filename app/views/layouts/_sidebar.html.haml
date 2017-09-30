@@ -9,5 +9,6 @@
     .sidebar__groups-list
       - current_user.groups.each do |group|
         .sidebar__group
-          %p.sidebar__group-name #{group.name}
-          %p.sidebar__group-messeage まだメッセージはありません
+          = link_to group_messages_path(group.id), class: "sidebar__group-content" do
+            %p.sidebar__group-name #{group.name}
+            %p.sidebar__group-messeage #{group.last_msg}

@@ -37,10 +37,16 @@
     background-color: $backgroundColorLightNavy;
     padding: 0 20px;
     height: 85%;
+    overflow: scroll;
   }
 
   &__group {
     padding: 20px 0 40px 0;
+
+    &-content {
+      text-decoration: none;
+      color: $fontColorWhite;
+    }
 
     &-name {
       font-size: 15px;
