@@ -9,7 +9,11 @@ class Group < ApplicationRecord
     if messages.blank?
       "まだメッセージはありません"
     else
-      messages.last.body
+      if messages.last.image?
+        "画像が投稿されています"
+      else
+        messages.last.body
+      end
     end
   end
 end
