@@ -13,15 +13,7 @@
     .contents__header__edit
       =link_to "edit", edit_group_path(@group.id), class: "contents__header__edit-btn"
 
-  .contents__body
-    .contents__body__messeage-list
-      - @messages.each do |message|
-        .contents__body__messeage
-          .contents__body__messeage-name #{message.user.name}
-          .contents__body__messeage-time #{message.created_at.strftime('%Y-%m-%d %H:%M:%S')}
-        .contents__body__messeage-body #{message.body}
-        - if message.image?
-          = image_tag message.image.thumb.url, class: "contents__body__messeage-image"
+  = render partial: 'message_content'
 
   .contents__footer
     .contents__footer__form
