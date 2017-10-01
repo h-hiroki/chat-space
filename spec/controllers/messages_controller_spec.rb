@@ -66,7 +66,7 @@ describe MessagesController, type: :controller do
 
       it "NOT insert the message and renders the :index template" do
         post :create, params: { message: error_message, group_id: group.id }
-        expect(response).to redirect_to new_user_session_path
+        expect(response).to render_template :index
       end
     end
 
