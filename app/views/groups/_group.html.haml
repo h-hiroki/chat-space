@@ -24,10 +24,12 @@
       = f.label :name, 'チャットメンバー', class: 'chat-group-form__label', for: 'chat_group_チャットメンバー'
     .chat-group-form__field--right
       #chat-group-users
-        .chat-group-user.clearfix#chat-group-user-@user.id
-          = f.hidden_field :user_ids, value: "@user.id"
-        .chat-group-user__name
-          user_name
+        - @group.users.each do |user|
+          .chat-group-user.clearfix
+            %input{type: "hidden", name: 'group[user_ids][]', value: "#{user.id}"}
+            %p.chat-group-user__name
+              #{user.name}
+            = link_to "削除", "", class: 'user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
