@@ -17,8 +17,8 @@
 
   .contents__footer
     .contents__footer__form
-      = form_for @message, url: {action: :create}, html: {class: 'contents__footer__form'} do |f|
-        = f.text_field :body, placeholder: "type a message"
+      = form_for [@group, @message], html: {class: 'contents__footer__form'} do |f|
+        = f.text_field :body, placeholder: "type a message", id: "contents__footer__form"
         = f.label :image, class: "contents__footer__btn__input" do
           %i{"class":"fa fa-picture-o", "aria-hidden": "true"}
           = f.file_field :image, class: "contents__footer__btn__input-field"
