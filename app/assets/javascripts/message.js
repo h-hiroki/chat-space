@@ -1,18 +1,18 @@
 $(function(){
   function buildHTML(message){
-    var html_image = message.image == null ? "" : `<img src="${message.image}" class="contents__body__messeage-image">`
-    var html = `<div class="contents__body__messeage">
+    var html_image = message.image === null ? "" : `<img src="${message.image}" class="contents__body__messeage-image">`
+    var html = `<div class="contents__body__messeage" data-message-id="${message.id}">
                   <div class="contents__body__messeage-name">
                     ${message.name}
                   </div>
                   <div class="contents__body__messeage-time">
                     ${message.created_at}
                   </div>
-                </div>
-                <div class="contents__body__messeage-body">
+                  <div class="contents__body__messeage-body">
                     ${message.body}
-                </div>
-                  ${html_image}`
+                  </div>
+                    ${html_image}
+                </div>`
     return html;
   }
 
@@ -41,5 +41,36 @@ $(function(){
     })
 
   })
+
+  var autoUpdate = function(){
+    var url = location.href;
+    if(url.match(/groups\/[0-9]+\/messages/)){
+
+      $.ajax({
+        url: location.href,
+        type: 'GET',
+        dataType: 'json'
+      })
+
+      .done(function(messages){
+        var latest_id = $(".contents__body__messeage:last").data('message-id');
+        var insertHTML = '';
+        messages.forEach(function(message) {
+          if (message.id > latest_id) {
+            insertHTML += buildHTML(message);
+            $('.contents__body__messeage-list').append(insertHTML);
+            $('.contents__body').animate( {scrollTop: $('.contents__body__messeage-list')[0].scrollHeight} );
+          }
+        });
+      })
+
+      .fail(function(messages){
+        alert("失敗");
+      })
+
+    }
+  }
+
+  setInterval(autoUpdate, 5000);
 
 });
