@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
-    var html_image = message.image == null ? "" : `<img src="${message.image}" class="contents__body__messeage-image">`
-    var html = `<div class="contents__body__messeage">
+    var html_image = message.image === null ? "" : `<img src="${message.image}" class="contents__body__messeage-image">`
+    var html = `<div class="contents__body__messeage" data-message-id="${message.id}">
                   <div class="contents__body__messeage-name">
                     ${message.name}
                   </div>
@@ -54,15 +54,14 @@ $(function(){
 
       .done(function(messages){
         var latest_id = $(".contents__body__messeage:last").data('message-id');
-        console.log(latest_id);
         var insertHTML = '';
         messages.forEach(function(message) {
           if (message.id > latest_id) {
             insertHTML += buildHTML(message);
+            $('.contents__body__messeage-list').append(insertHTML);
+            $('.contents__body').animate( {scrollTop: $('.contents__body__messeage-list')[0].scrollHeight} );
           }
         });
-        $('.contents__body__messeage-list').append(insertHTML);
-        $('.contents__body').animate( {scrollTop: $('.contents__body__messeage-list')[0].scrollHeight} );
       })
 
       .fail(function(messages){
