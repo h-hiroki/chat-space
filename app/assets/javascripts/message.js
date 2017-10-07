@@ -43,26 +43,33 @@ $(function(){
   })
 
   var autoUpdate = function(){
-    $.ajax({
-      url: "/groups/2/messages",
-      type: 'GET',
-      dataType: 'json'
-    })
-    .done(function(messages){
-      var latest_id = $(".contents__body__messeage:last").data('message-id');
-      console.log(latest_id);
-      var insertHTML = '';
-      messages.forEach(function(message) {
-        if (message.id > latest_id) {
-          insertHTML += buildHTML(message);
-        }
-      });
-      $('.contents__body__messeage-list').append(insertHTML);
-      $('.contents__body').animate( {scrollTop: $('.contents__body__messeage-list')[0].scrollHeight} );
-    })
-    .fail(function(messages){
-      alert("失敗");
-    })
+    var url = location.href;
+    if(url.match(/groups\/[0-9]+\/messages/)){
+
+      $.ajax({
+        url: location.href,
+        type: 'GET',
+        dataType: 'json'
+      })
+
+      .done(function(messages){
+        var latest_id = $(".contents__body__messeage:last").data('message-id');
+        console.log(latest_id);
+        var insertHTML = '';
+        messages.forEach(function(message) {
+          if (message.id > latest_id) {
+            insertHTML += buildHTML(message);
+          }
+        });
+        $('.contents__body__messeage-list').append(insertHTML);
+        $('.contents__body').animate( {scrollTop: $('.contents__body__messeage-list')[0].scrollHeight} );
+      })
+
+      .fail(function(messages){
+        alert("失敗");
+      })
+
+    }
   }
 
   setInterval(autoUpdate, 5000);
