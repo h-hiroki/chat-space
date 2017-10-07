@@ -8,7 +8,6 @@ $(function(){
                   <div class="contents__body__messeage-time">
                     ${message.created_at}
                   </div>
-                  </div>
                   <div class="contents__body__messeage-body">
                     ${message.body}
                   </div>
